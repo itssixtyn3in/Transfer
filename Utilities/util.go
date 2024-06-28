@@ -4,7 +4,6 @@ import (
 	"fmt"
 	"os/exec"
 	"runtime"
-	"strings"
 )
 
 func ExecuteCommand() {
