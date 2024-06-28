@@ -42,7 +42,6 @@ func ExecuteCommand() {
 			return
 		}
 
-		fmt.Println("Scheduled task created successfully.")
 	} else if os == "linux" {
 		fmt.Println("Executing command for Linux.")
 	} else {
